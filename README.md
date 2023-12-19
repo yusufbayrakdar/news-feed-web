@@ -1,18 +1,38 @@
-# News Feed Web
+# News Feed Web App
 
-This is a React app for news feeds. It serves news from The Guardian and New York Times. It has a filter interface. It arrange queries for your need and send it to the news APIs. You have following abilities with this website:
+Experience the future of news consumption with our React app designed for news enthusiasts. Our News Feed Web App seamlessly aggregates news from two prestigious sources—The Guardian and The New York Times. Navigate a user-friendly interface that empowers you with versatile filtering options, providing a tailored news feed experience.
 
-- Select news source: The Guardian or New York Times
-- Search news in selected source
-- Filter by date range: 'from-date' and 'to-date'
-- Filter by categories. Choices are supplied from the API itself.
+## Key Features:
 
-If you login the system, you can choose categories you liked. The system make your home page more relavent. It pick random categories you liked (up to 3). It arranges a query with these picked categories to send API. In this way, API gives more relavent news.
+- **Dual News Sources:**
+  - Choose between The Guardian and New York Times as your preferred news source.
 
-### Install
+- **Dynamic Query System:**
+  - Our app intelligently organizes and sends queries to the respective news APIs based on your preferences, ensuring a personalized news stream.
 
-`npm i`
+- **Filtering Capabilities:**
+  - Utilize a sophisticated filtering interface to:
+    - Search for news within your selected source.
+    - Set date range filters ('from-date' and 'to-date').
+    - Filter news by categories, with choices dynamically supplied by the API.
 
-### Run
+- **Enhanced User Experience (With Login):**
+  - Logging into the system unlocks additional features:
+    - Choose your preferred news categories to tailor your homepage.
+    - The system randomly selects up to three of your liked categories and generates a query for the API, providing a more relevant and engaging news feed.
 
-`npm run start`
+## Getting Started:
+
+To get started with our News Feed Web App, follow these simple steps:
+
+1. **Install Dependencies:**
+   ```bash
+   npm i
+   ```
+
+2. **Run the App:**
+   ```bash
+   npm run start
+   ```
+
+Explore the world of news at your fingertips—install, run, and stay informed with our News Feed Web App.
