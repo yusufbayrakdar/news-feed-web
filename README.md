@@ -1,4 +1,4 @@
-# news-feed-web
+# News Feed Web
 
 This is a React app for news feeds. It serves news from The Guardian and New York Times. It has a filter interface. It arrange queries for your need and send it to the news APIs. You have following abilities with this website:
 
