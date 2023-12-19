@@ -45,8 +45,10 @@ export default function CategoryModal({categories, isVisible, close, onSubmit}) 
         <Form form={form} layout="vertical">
           <div>
             <Checkbox.Group defaultValue={categories} onChange={checkboxOnChange}>
-              {uniqueCategories.map((c) => (
-                <StyledCheckbox value={c}>{c}</StyledCheckbox>
+              {uniqueCategories.map((c, i) => (
+                <StyledCheckbox key={i} value={c}>
+                  {c}
+                </StyledCheckbox>
               ))}
             </Checkbox.Group>
           </div>

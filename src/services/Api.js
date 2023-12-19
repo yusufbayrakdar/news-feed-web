@@ -1,4 +1,4 @@
-import {TOKEN, showWarningMessage} from "../utils";
+import {TOKEN} from "../utils";
 
 import CustomHttpService from "./CustomHttpService";
 
@@ -96,6 +96,10 @@ class Api {
   }
 
   // auth
+  signUp = (signUpData) => {
+    return this._doPost("/auth/register", signUpData);
+  };
+
   login = (loginData) => {
     return this._doPostWithAuth("/auth/login", loginData);
   };

@@ -6,6 +6,19 @@ import {$A, TOKEN, showErrorMessage, showWarningMessage} from "../../utils";
 
 import * as $ from "../actionTypes";
 
+const trySignUpSaga = function* ({payload}) {
+  try {
+    const {user, token} = yield call(Api.signUp, payload);
+
+    localStorage.setItem(TOKEN, token);
+
+    yield put($A($.SIGNUP_SUCCESS, user));
+  } catch (error) {
+    showErrorMessage(error, "Sign Up Failed!");
+    yield put($A($.SIGNUP_FAILURE));
+  }
+};
+
 const tryLoginSaga = function* ({payload}) {
   try {
     localStorage.setItem(TOKEN, "");
@@ -48,6 +61,7 @@ const tryLogoutSaga = function* () {
 
 // prettier-ignore
 export default function* () {
+  yield takeEvery($.SIGNUP_REQUEST, trySignUpSaga);
   yield takeEvery($.LOGIN_REQUEST, tryLoginSaga);
   yield takeEvery($.AUTO_LOGIN_REQUEST, tryAutoLoginSaga);
   yield takeLatest($.LOGOUT_REQUEST, tryLogoutSaga);

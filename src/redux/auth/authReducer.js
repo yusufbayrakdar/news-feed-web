@@ -3,11 +3,27 @@ import * as $ from "../actionTypes";
 const initialState = {
   loggedIn: false,
   user: null,
+  signUpInProgress: false,
+  loginInProgress: false,
   autoLoginInLoading: false
 };
 
 export default (state = initialState, {type, payload}) => {
   switch (type) {
+    case $.SIGNUP_REQUEST:
+      return {...state, loginInProgress: true};
+
+    case $.SIGNUP_SUCCESS:
+      return {
+        ...state,
+        signUpInProgress: false,
+        user: payload,
+        loggedIn: true
+      };
+
+    case $.SIGNUP_FAILURE:
+      return {...state, signUpInProgress: false, loggedIn: false, user: null};
+
     case $.LOGIN_REQUEST:
       return {...state, loginInProgress: true};
 

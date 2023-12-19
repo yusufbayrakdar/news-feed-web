@@ -3,7 +3,10 @@ import {useSelector} from "react-redux";
 
 import {Layout} from "antd";
 
+import {AuthButtonsContainer} from "./styles";
+
 import LoginButton from "../../Buttons/LoginButton";
+import SignUpButton from "../../Buttons/SignUpButton";
 import UserDropdown from "../../UserDropdown";
 
 function Header() {
@@ -16,7 +19,14 @@ function Header() {
         justifyContent: "flex-end",
         alignItems: "center"
       }}>
-      {loggedIn ? <UserDropdown /> : <LoginButton />}
+      {loggedIn ? (
+        <UserDropdown />
+      ) : (
+        <AuthButtonsContainer>
+          <SignUpButton />
+          <LoginButton />
+        </AuthButtonsContainer>
+      )}
     </Layout.Header>
   );
 }
