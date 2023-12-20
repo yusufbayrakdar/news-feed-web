@@ -34,5 +34,9 @@ To get started with our News Feed Web App, follow these simple steps:
    ```bash
    npm run start
    ```
+3. **Recommended Node version**
+   ```bash
+   v16.20.1
+   ```
 
 Explore the world of news at your fingertips—install, run, and stay informed with our News Feed Web App.
